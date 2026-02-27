@@ -2,11 +2,16 @@ autos = ["VW", "Opel", "Porsche", "Ferrari"]
 
 
 print("Welches Auto möchtest du haben")
-input = input()
+user_input = input()
 
-for i in autos:
-    if input == i:
-        print("Haben wir dieses Auto auf Lager")
+i = 0
+found = False
+while i < len(autos):
+    if user_input == autos[i]:
+        print("Wir haben dieses Auto auf Lager")
+        found = True
         break
-    else:
-        print("Leider haben wir dieses Auto nicht mehr auf lager ")
+    i += 1
+
+if not found:
+    print("Leider haben wir dieses Auto nicht mehr auf lager")
